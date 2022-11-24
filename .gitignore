@@ -5,3 +5,4 @@ be/coffe-app/package-lock.json
 be/coffe-app/public/img
 be/coffe-app/.env
 be/coffe-app/composer.lock
+**/.idea
