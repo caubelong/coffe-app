@@ -9,14 +9,14 @@ const router = createRouter({
   routes,
 });
 //kiem tra xem nguoi dung dang nhap chua, neu chua dang nhap thi dua ve trang login
-// router.beforeEach((to, from, next) => {
-//   const loggedIn = localStorage.getItem("token");
-//
-//   if (to.matched.some((record) => record.meta.auth) && !loggedIn) {
-//     next("/login");
-//     return;
-//   }
-//   next();
-// });
+router.beforeEach((to, from, next) => {
+  const loggedIn = localStorage.getItem("token");
+
+  if (to.matched.some((record) => record.meta.auth) && !loggedIn) {
+    next("/login");
+    return;
+  }
+  next();
+});
 
 export default router;
