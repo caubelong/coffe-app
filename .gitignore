@@ -1,8 +1,8 @@
-fe/coffe-app/node_modules
+fe/node_modules
 fe/.idea 
 be/.idea
-be/coffe-app/package-lock.json
-be/coffe-app/public/img
-be/coffe-app/.env
-be/coffe-app/composer.lock
+be/package-lock.json
+be/public/img
+be/.env
+be/composer.lock
 **/.idea
