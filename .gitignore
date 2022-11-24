@@ -1,0 +1,7 @@
+fe/coffe-app/node_modules
+fe/coffe-app/.idea 
+be/coffe-app/.idea
+be/coffe-app/package-lock.json
+be/coffe-app/public/img
+be/coffe-app/.env
+be/coffe-app/composer.lock
