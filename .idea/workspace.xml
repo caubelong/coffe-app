@@ -2,6 +2,136 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="063860d2-e655-44e7-a9b3-838d2a84fa1d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/.idea/be.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/.editorconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/.env.example" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/app/Console/Kernel.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/app/Exceptions/Handler.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/app/Http/Controllers/Api/admin/AuthController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/app/Http/Controllers/Api/admin/CategoryController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/app/Http/Controllers/Api/admin/PostController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/app/Http/Controllers/Api/admin/ProductController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/app/Http/Controllers/Api/admin/RoleController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/app/Http/Controllers/Api/admin/ToppingController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/app/Http/Controllers/Api/admin/UserController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/app/Http/Controllers/Api/user/ClientController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/app/Http/Controllers/Controller.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/app/Http/Kernel.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/app/Http/Middleware/Authenticate.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/app/Http/Middleware/EncryptCookies.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/app/Http/Middleware/PreventRequestsDuringMaintenance.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/app/Http/Middleware/RedirectIfAuthenticated.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/app/Http/Middleware/TrimStrings.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/app/Http/Middleware/TrustHosts.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/app/Http/Middleware/TrustProxies.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/app/Http/Middleware/ValidateSignature.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/app/Http/Middleware/VerifyCsrfToken.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/app/Http/Requests/CategoryValidated.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/app/Http/Requests/ProductValidated.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/app/Http/Requests/RoleValidated.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/app/Http/Requests/ToppingValidated.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/app/Http/Requests/UserValidated.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/app/Http/Resources/Post.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/app/Http/Resources/Product.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/app/Http/Resources/Topping.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/app/Http/Resources/User.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/app/Models/Category.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/app/Models/Post.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/app/Models/Product.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/app/Models/Role.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/app/Models/StatusOrder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/app/Models/Topping.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/app/Models/User.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/app/Providers/AppServiceProvider.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/app/Providers/AuthServiceProvider.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/app/Providers/BroadcastServiceProvider.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/app/Providers/EventServiceProvider.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/app/Providers/RouteServiceProvider.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/artisan" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/bootstrap/app.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/bootstrap/cache/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/composer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/config/app.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/config/auth.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/config/broadcasting.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/config/cache.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/config/cors.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/config/database.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/config/filesystems.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/config/hashing.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/config/logging.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/config/mail.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/config/queue.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/config/sanctum.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/config/services.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/config/session.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/config/view.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/database/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/database/factories/UserFactory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/database/migrations/2013_10_26_020607_create_role_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/database/migrations/2014_10_12_100000_create_password_resets_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/database/migrations/2019_08_19_000000_create_failed_jobs_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/database/migrations/2019_12_14_000001_create_personal_access_tokens_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/database/migrations/2022_10_26_020708_create_post_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/database/migrations/2022_10_26_020820_create_category_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/database/migrations/2022_10_26_020843_create_product_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/database/migrations/2022_10_26_020914_create_status_order_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/database/migrations/2022_10_26_020941_create_order_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/database/migrations/2022_10_26_020958_create_order_detail_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/database/migrations/2022_11_03_073216_add_is_deleted_user.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/database/migrations/2022_11_04_075819_create_topping_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/database/migrations/2022_11_14_081133_update_role_name_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/database/migrations/2022_11_14_081925_update_unique_name_all_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/database/seeders/DatabaseSeeder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/database/seeders/RoleSeeder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/database/seeders/UserSeeder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/lang/en/auth.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/lang/en/pagination.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/lang/en/passwords.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/lang/en/validation.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/phpunit.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/public/.htaccess" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/public/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/public/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/public/robots.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/resources/css/app.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/resources/js/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/resources/js/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/resources/views/welcome.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/routes/api.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/routes/channels.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/routes/console.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/routes/web.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/storage/app/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/storage/app/public/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/storage/framework/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/storage/framework/cache/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/storage/framework/cache/data/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/storage/framework/sessions/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/storage/framework/testing/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/storage/framework/views/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/storage/logs/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/tests/CreatesApplication.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/tests/Feature/ExampleTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/tests/TestCase.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/tests/Unit/ExampleTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/coffe-app/vite.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fe/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fe/.idea/fe.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fe/.idea/jsLinters/eslint.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fe/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fe/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fe/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fe/coffe-app" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/fe/coffe-app/src/components/admin/TheHeader.vue" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/fe/coffe-app/src/components/admin/TheNavBar.vue" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/fe/coffe-app/src/components/admin/ckEditer.vue" afterDir="false" />
@@ -72,10 +202,8 @@
       <change afterPath="$PROJECT_DIR$/fe/coffe-app/src/store/getUrlApi.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/fe/coffe-app/src/store/getUserToken.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/fe/coffe-app/src/store/store-nav-menu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/coffe web.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/be/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/fe/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/coffe-app" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/fe/coffe-app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/fe/coffe-app/package.json" afterDir="false" />
@@ -106,17 +234,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -126,6 +254,7 @@
       <option name="presentableId" value="Default" />
       <updated>1669283453937</updated>
       <workItem from="1669283457441" duration="645000" />
+      <workItem from="1669284354568" duration="143000" />
     </task>
     <servers />
   </component>
