@@ -1,10 +1,7 @@
 import axios from "axios";
 import { getUrlApi } from "@/store/getUrlApi";
-import { useToken } from "@/store/getUserToken";
 import { ref } from "vue";
 export default function useProduct() {
-  const getUserToken = useToken();
-  const { headers } = getUserToken;
   const url = getUrlApi().$state.apiUrl;
   const products = ref([]);
   const product = ref([]);
@@ -12,9 +9,7 @@ export default function useProduct() {
   const isPending = ref(false);
   const getProducts = async () => {
     try {
-      const res = await axios.get(url + "admin/products", {
-        headers: headers,
-      });
+      const res = await axios.get(url + "admin/products");
       products.value = await res.data.data;
     } catch (e) {
       console.log(e);
@@ -22,9 +17,7 @@ export default function useProduct() {
   };
   const getProduct = async (id) => {
     try {
-      const res = await axios.get(url + `admin/products/${id}`, {
-        headers: headers,
-      });
+      const res = await axios.get(url + `admin/products/${id}`);
       product.value = await res.data.data;
     } catch (e) {
       console.log(e);
@@ -37,7 +30,6 @@ export default function useProduct() {
       header: {
         "Content-type": "application/json; charset=UTF-8",
       },
-      headers: headers,
     };
     const newProduct = new FormData();
     newProduct.append("name", data?.name);
@@ -48,7 +40,7 @@ export default function useProduct() {
     newProduct.append("thumbnail", data?.thumbnail);
     newProduct.append("status", data?.status);
     try {
-      const res = await axios.post(url + "admin/products", newProduct, config);
+      const res = await axios.post(url + "admin/products", newProduct);
       if (!res) throw new Error("Could not save product ");
     } catch (err) {
       console.log(err.response.data);
@@ -63,7 +55,6 @@ export default function useProduct() {
       header: {
         "Content-type": "application/json; charset=UTF-8",
       },
-      headers: headers,
     };
     const updapteProduct = new FormData();
     updapteProduct.set("name", product.value?.name);
@@ -77,8 +68,7 @@ export default function useProduct() {
     try {
       const res = await axios.post(
         url + `admin/products/${id}`,
-        updapteProduct,
-        config
+        updapteProduct
       );
     } catch (err) {
       errors.value = err.response.data.errors;
@@ -87,9 +77,7 @@ export default function useProduct() {
     }
   };
   const removeProduct = async (id) => {
-    await axios.delete(url + `admin/products/${id}`, {
-      headers: headers,
-    });
+    await axios.delete(url + `admin/products/${id}`);
   };
   return {
     products,

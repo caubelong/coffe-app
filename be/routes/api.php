@@ -24,10 +24,23 @@ use App\Http\Controllers\Api\user\ClientController;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+//Route::get('/user', function (Request $request) {
+//    return $request->user();
+//});
 Route::post('/auth/login', [AuthController::class, 'login']);
-Route::get('/auth/logout',[AuthController::class, 'logout'])->middleware('auth:sanctum');
+//Route::get('/auth/logout',[AuthController::class, 'logout'])->middleware('auth:sanctum');
+Route::get('/auth/logout',[AuthController::class, 'logout']);
 Route::post('/auth/register', [AuthController::class, 'register']);
-Route::group(['prefix'=>'admin','middleware'=>'auth:sanctum'],function (){
+//  chưa fix được phần fe nên làm đơn giản hơn k dùng middleware
+//Route::group(['prefix'=>'admin','middleware'=>'auth:sanctum'],function (){
+//    Route::apiResource('roles',RoleController::class);
+//    Route::apiResource('users',UserController::class);
+//    Route::apiResource('toppings',ToppingController::class);
+//    Route::apiResource('categories',CategoryController::class);
+//    Route::apiResource('products',ProductController::class);
+//    Route::apiResource('posts',PostController::class);
+//});
+Route::group(['prefix'=>'admin'],function (){
     Route::apiResource('roles',RoleController::class);
     Route::apiResource('users',UserController::class);
     Route::apiResource('toppings',ToppingController::class);

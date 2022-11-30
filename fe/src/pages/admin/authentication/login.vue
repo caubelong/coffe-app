@@ -1,6 +1,6 @@
 <template>
-  <div class="mb-3 w-75">
-    <a-alert :closable="true" type="error" show-icon />
+  <div class="mb-3 w-75" v-if="errors">
+    <a-alert :closable="true" type="error" :message="errors" show-icon />
   </div>
   <a-form
     style="margin: 20px"
@@ -39,14 +39,19 @@
     </a-form-item>
 
     <a-form-item :wrapper-col="{ offset: 16 }">
-      <a-button type="primary" html-type="submit">Login</a-button>
+      <a-button
+        type="primary"
+        html-type="submit"
+        :class="{ isPending: isPending }"
+        >{{ isPending ? "Loading..." : "Login" }}</a-button
+      >
     </a-form-item>
   </a-form>
 </template>
 
 <script>
-// import useAuth from "@/composables/admin/useAuth";
-// import { useRouter } from "vue-router";
+import useAuth from "@/composables/admin/useAuth";
+import { useRouter } from "vue-router";
 import { defineComponent, reactive } from "vue";
 export default defineComponent({
   name: "login-comp",
@@ -55,12 +60,14 @@ export default defineComponent({
       email: "",
       password: "",
     });
-    // const { login, errors, isPending } = useAuth();
-    // const route = useRouter();
+    const { login, errors, isPending } = useAuth();
+    const route = useRouter();
     const onFinish = async (values) => {
       console.log("Success:", values);
-      // await login({ ...formState });
-      // await route.push("admin/product");
+      await login({ ...formState });
+      if (errors) {
+        await route.push("admin/product");
+      } else return;
     };
     const onFinishFailed = (errorInfo) => {
       console.log("Failed:", errorInfo);
@@ -69,11 +76,15 @@ export default defineComponent({
       formState,
       onFinish,
       onFinishFailed,
-      // errors,
-      // isPending,
+      errors,
+      isPending,
     };
   },
 });
 </script>
 
-<style scoped></style>
+<style scoped>
+.isPending {
+  opacity: 0.5;
+}
+</style>

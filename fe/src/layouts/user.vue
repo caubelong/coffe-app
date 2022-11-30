@@ -22,8 +22,8 @@
 </template>
 
 <script>
-import { useRouter } from "vue-router";
-import { onMounted } from "vue";
+// import { useRouter } from "vue-router";
+// import { onMounted } from "vue";
 import theHeader from "@/components/user/theHeader";
 export default {
   name: "user-comp",
@@ -31,10 +31,10 @@ export default {
     theHeader,
   },
   setup() {
-    const route = useRouter();
-    onMounted(() => {
-      route.push("/home");
-    });
+    // const route = useRouter();
+    // onMounted(() => {
+    //   route.push("/home");
+    // });
   },
 };
 </script>

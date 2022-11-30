@@ -1,5 +1,5 @@
 import Admin from "@/layouts/admin";
-import NotFound from "@/pages/NotFound";
+import NotFound from "@/pages/admin/NotFoundAdmin";
 const admin = [
   {
     path: "/admin",
@@ -8,6 +8,7 @@ const admin = [
       auth: true,
     },
     children: [
+      { path: "/:pathMatch(.*)*", name: "NotFoundAdmin", component: NotFound },
       {
         path: "category",
         name: "admin-category",

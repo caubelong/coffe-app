@@ -1,6 +1,7 @@
 <template>
   <div class="container">
-    <div class="row mt-5" id="main-wrap">
+    <a-skeleton active v-if="isPendding" />
+    <div v-else class="row mt-5" id="main-wrap">
       <div class="col-3 d-none d-lg-flex h-100" id="list-menu-category">
         <ul>
           <li class="list-category" v-for="(menu, index) in menus" :key="index">
@@ -20,6 +21,7 @@
         </div>
       </div>
     </div>
+    <div v-if="errors">{{ errors }}</div>
   </div>
 </template>
 
@@ -33,7 +35,7 @@ export default {
     product,
   },
   setup() {
-    const { getMenus, menus } = useMenu();
+    const { getMenus, menus, isPendding, errors } = useMenu();
     onMounted(getMenus);
     const scroll = (id) => {
       document.getElementById(id).scrollIntoView({
@@ -43,6 +45,8 @@ export default {
     return {
       menus,
       scroll,
+      isPendding,
+      errors,
     };
   },
 };

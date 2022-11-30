@@ -15,12 +15,15 @@ export default function useMenu() {
   //get list menu
   const getMenus = async () => {
     errors.value = null;
+    isPendding.value = true;
     try {
       const res = await axios.get(url + "user/menu");
       menus.value = await res.data;
     } catch (err) {
       errors.value = err.message;
       console.log(errors.value);
+    } finally {
+      isPendding.value = false;
     }
   };
   // get info item
@@ -43,7 +46,7 @@ export default function useMenu() {
       isPendding.value = false;
     }
   };
-  // get post show slider
+  // get post show slider home
   const getPostSlider = async () => {
     try {
       const res = await axios.get(url + `user/menu/post-slider`);

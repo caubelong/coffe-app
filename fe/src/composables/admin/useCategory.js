@@ -1,10 +1,7 @@
 import axios from "axios";
 import { ref } from "vue";
 import { getUrlApi } from "@/store/getUrlApi";
-import { useToken } from "@/store/getUserToken";
 export default function useCategory() {
-  const getUserToken = useToken();
-  const { headers } = getUserToken;
   const url = getUrlApi().$state.apiUrl;
   const categories = ref([]);
   const category = ref([]);
@@ -12,9 +9,7 @@ export default function useCategory() {
   const isPending = ref(false);
   const getCategories = async () => {
     try {
-      const res = await axios.get(url + "admin/categories", {
-        headers: headers,
-      });
+      const res = await axios.get(url + "admin/categories");
       categories.value = await res.data;
     } catch (e) {
       console.log(e);
@@ -22,9 +17,7 @@ export default function useCategory() {
   };
   const getCategory = async (id) => {
     try {
-      const res = await axios.get(url + `admin/categories/${id}`, {
-        headers: headers,
-      });
+      const res = await axios.get(url + `admin/categories/${id}`);
       category.value = res.data;
     } catch (e) {
       console.log(e);
@@ -34,9 +27,7 @@ export default function useCategory() {
     isPending.value = true;
     errors.value = null;
     try {
-      const res = await axios.post(url + "admin/categories", data, {
-        headers: headers,
-      });
+      const res = await axios.post(url + "admin/categories", data);
       if (!res) throw new Error("Could not create category");
     } catch (err) {
       errors.value = err.response.data.errors;
@@ -50,10 +41,7 @@ export default function useCategory() {
     try {
       const res = await axios.put(
         url + `admin/categories/${id}`,
-        category.value,
-        {
-          headers: headers,
-        }
+        category.value
       );
       if (!res) throw new Error("Could not update category");
     } catch (err) {
@@ -64,9 +52,7 @@ export default function useCategory() {
   };
   const removeCategory = async (id) => {
     try {
-      await axios.delete(url + `admin/categories/${id}`, {
-        headers: headers,
-      });
+      await axios.delete(url + `admin/categories/${id}`);
     } catch (e) {
       console.log(e);
     }

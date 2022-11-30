@@ -78,7 +78,8 @@
 import { defineComponent, ref } from "vue";
 import { MenuOutlined, UserOutlined } from "@ant-design/icons-vue";
 import TheNavBar from "@/components/admin/TheNavBar";
-import { useToken } from "@/store/getUserToken";
+import { useRouter } from "vue-router";
+
 export default defineComponent({
   components: {
     TheNavBar,
@@ -94,9 +95,8 @@ export default defineComponent({
   setup() {
     const visible = ref(false);
     const visible_user = ref(false);
-    const getUserCurrent = useToken();
-    const { destroyToken } = getUserCurrent;
     const userLoginInfo = JSON.parse(localStorage.getItem("user"));
+    const routes = useRouter();
     const showDrawer = () => {
       visible.value = true;
     };
@@ -108,14 +108,21 @@ export default defineComponent({
         visible.value = false;
       }
     };
+    const destroyToken = () => {
+      if (userLoginInfo) {
+        localStorage.removeItem("user");
+        localStorage.removeItem("login");
+        routes.push("login");
+      }
+    };
     return {
       visible,
       showDrawer,
       showDrawerUser,
       visible_user,
       closeMenu,
-      destroyToken,
       userLoginInfo,
+      destroyToken,
     };
   },
 });

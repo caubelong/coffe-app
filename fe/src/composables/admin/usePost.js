@@ -1,20 +1,15 @@
 import { getUrlApi } from "@/store/getUrlApi";
 import axios from "axios";
 import { ref } from "vue";
-import { useToken } from "@/store/getUserToken";
 export default function usePost() {
   const url = getUrlApi().$state.apiUrl;
   const posts = ref([]);
   const postInfo = ref([]);
   const isPending = ref(false);
   const errors = ref(null);
-  const getUserToken = useToken();
-  const { headers } = getUserToken;
   const getPosts = async () => {
     try {
-      const res = await axios.get(url + "admin/posts", {
-        headers: headers,
-      });
+      const res = await axios.get(url + "admin/posts");
       posts.value = await res.data.data;
     } catch (err) {
       console.log(err);
@@ -22,9 +17,7 @@ export default function usePost() {
   };
   const getPost = async (id) => {
     try {
-      const res = await axios.get(url + `admin/posts/${id}`, {
-        headers: headers,
-      });
+      const res = await axios.get(url + `admin/posts/${id}`);
       postInfo.value = await res.data.data;
     } catch (err) {
       console.log(err);
@@ -37,7 +30,6 @@ export default function usePost() {
       header: {
         "Content-type": "application/json; charset=UTF-8",
       },
-      headers: headers,
     };
     const newPost = new FormData();
     newPost.append("title", data?.title);
@@ -46,7 +38,7 @@ export default function usePost() {
     newPost.append("thumbnail", data?.thumbnail);
     newPost.append("status", data?.status);
     try {
-      const res = await axios.post(url + "admin/posts", newPost, config);
+      const res = await axios.post(url + "admin/posts", newPost);
     } catch (err) {
       console.log(err);
     } finally {
@@ -60,7 +52,6 @@ export default function usePost() {
       header: {
         "Content-type": "application/json; charset=UTF-8",
       },
-      headers: headers,
     };
     const postUpdate = new FormData();
     postUpdate.set("title", postInfo.value?.title);
@@ -82,9 +73,7 @@ export default function usePost() {
     }
   };
   const removePost = async (id) => {
-    const res = await axios.delete(url + `admin/posts/${id}`, {
-      headers: headers,
-    });
+    const res = await axios.delete(url + `admin/posts/${id}`);
     console.log(res);
   };
   return {

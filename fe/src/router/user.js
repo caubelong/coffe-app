@@ -1,10 +1,12 @@
 import home from "@/layouts/user";
+import NotFound from "@/pages/user/NotFound";
 const user = [
   {
     path: "/",
     name: "home",
     component: home,
     children: [
+      { path: "/:pathMatch(.*)*", name: "NotFound", component: NotFound },
       {
         path: "home",
         name: "home-page",
